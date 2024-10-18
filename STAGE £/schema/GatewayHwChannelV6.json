@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Gateway hardware channel - V2.1",
+    "type": "object",
+    "properties": {
+        "channelId": {
+            "type": "string"
+        },
+        "mode": {
+            "type": "string",
+            "enum": [
+                "DISABLED",
+                "ASYNCHRONOUS"
+            ]
+        },
+        "inv_pol": {
+            "type": "boolean",
+            "default": false
+        },
+        "dataRate": {
+            "type": "string",
+            "minimum": 0,
+            "maximum": 15
+        },
+        "centerFrequency": {
+            "type": "number",
+            "multipleOf": 0.5,
+            "minimum": 2400,
+            "maximum": 2480.5
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "channelId",
+        "mode",
+        "dataRate",
+        "centerFrequency"
+    ]
+}

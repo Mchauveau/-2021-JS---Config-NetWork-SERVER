@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Gateway creation request - V2.1",
+    "type": "object",
+    "properties": {
+        "reqId": {
+            "type": "string"
+        },
+        "gatewayId": {
+            "type": "string",
+            "minLength": 16,
+            "maxLength": 16,
+            "pattern": "^[0-9A-F][02468ACE][0-9A-F]{14}$"
+        },
+        "gatewayName": {
+            "type": "string",
+            "minLength": 1
+        },
+        "mqttBrokerId": {
+            "type": "string",
+            "minLength": 1
+        },
+        "serial": {
+            "type": "integer"
+        },
+        "hostName": {
+            "type": "string"
+        },
+        "ethernetMac": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "swRev": {
+            "type": "string"
+        },
+        "hwRev": {
+            "type": "string"
+        },
+        "setPosition": {
+            "type": "string",
+            "enum": [
+                "CEIL",
+                "WALL"
+            ]
+        },
+        "x_pos_m": {
+            "type": "number"
+        },
+        "y_pos_m": {
+            "type": "number"
+        },
+        "z_pos_m": {
+            "type": "number"
+        },
+        "param_1": {
+            "type": "number"
+        },
+        "param_2": {
+            "type": "number"
+        },
+        "gatewayHwChannels": {
+            "type": "array",
+            "items": {
+                "$ref": "GatewayHwChannelV6.json"
+            },
+            "minItems": 1
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "reqId",
+        "gatewayId",
+        "gatewayName",
+        "mqttBrokerId",
+        "serial",
+        "hostName",
+        "ethernetMac",
+        "comment",
+        "swRev",
+        "hwRev",
+        "setPosition",
+        "x_pos_m",
+        "y_pos_m",
+        "z_pos_m",
+        "param_1",
+        "param_2",
+        "gatewayHwChannels"
+    ]
+}

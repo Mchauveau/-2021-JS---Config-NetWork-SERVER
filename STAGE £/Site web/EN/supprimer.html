@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title> Control Panel - Network Server </title>
+<link rel="stylesheet" href="CSS.css">
+<script src="JSPROJET.js"></script>
+</head>		
+<ul class="nav nav-tabs">
+  <li class="active btn btn-lg btn-secondary"><a href="../EN/supprimer.html">Delete</a></li>
+  <li class="active btn btn-lg btn-warning"><a href="../EN/index.html">Create</a></li>
+  <li class="active btn btn-lg btn-secondary"><a href="#">Overview</a></li>
+  <li class="active1"><a href="../FR/index.html" > <img width="35px" src="DrapeauFR.png"></a></li>
+</ul>
+  <body class="text-center">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Control Panel - Network Server</h1>
+        <p class="lead">You can <font color="red"><strong>delete</strong></font> your network server's configurations with the following form :</p>
+			<form class="form-group">
+			<label for="sel1">What do you want to delete :</label>
+			<select class="form-control" id="sel1">
+			<option>Gateway</option>
+			<option>Broker</option>
+			<option>Network server</option>
+			</select>
+			<p>  </p>
+			<input class="btn btn-lg btn-secondary"  type="submit" value="Next" onclick="Suppression();return false;">
+			<div id="formjs">
+			</div>
+			<div class="inner cover">
+			<table class="table">
+			<tr>
+			</tr>
+			</table>
+			</div>
+			</main>
+   </div>
+ </body>

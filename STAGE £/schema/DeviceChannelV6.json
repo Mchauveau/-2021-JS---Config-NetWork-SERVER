@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Device channel - V2.1",
+    "type": "object",
+    "properties": {
+        "channelId": {
+            "type": "string"
+        },
+        "dataRateName": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+        },
+        "fbin": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 167
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "channelId",
+        "dataRateName",
+        "fbin"
+    ]
+}

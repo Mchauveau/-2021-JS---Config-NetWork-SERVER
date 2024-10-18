@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Mqtt Broker removal request - V2.1",
+    "type": "object",
+    "properties": {
+        "reqId": {
+            "type": "string",
+            "minLength": 1
+        },
+        "mqttBrokerId": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "reqId",
+        "mqttBrokerId"
+    ]
+}

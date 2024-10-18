@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Mqtt Broker list response - V2.1",
+    "type": "object",
+    "properties": {
+        "reqId": {
+            "type": "string",
+            "minLength": 1
+        },
+        "mqttBrokerIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "reqId",
+        "mqttBrokerIds"
+    ]
+}

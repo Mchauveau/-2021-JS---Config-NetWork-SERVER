@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "CAM Configuration creation request - V1.1",
+    "type": "object",
+    "properties": {
+        "reqId": {
+            "type": "string"
+        },
+        "CamConfigParameters": {
+            "type": "array",
+            "items": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "name",
+                    "value"
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "reqId",
+        "CamConfigParameters"
+    ]
+}

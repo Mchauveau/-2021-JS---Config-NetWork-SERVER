@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta content="text/html;charset=UTF-8">
+<!-- Entête liant la page web au javascript et au CSS -->
+<title> Pannel de gestion - Network Server </title>
+<link rel="stylesheet" href="CSS.css">
+<script src="bundle.js"></script>
+<script src="js\JSPROJET.js"></script>
+</head>		
+<!-- Onglets top avec image pour changement de langue -->
+<ul class="nav nav-tabs">
+  <li class="active btn btn-lg btn-secondary"><a href="../FR/supprimer.html">Supprimer</a></li>
+  <li class="active btn btn-lg btn-warning"><a href="../FR/conf.html">Ajouter</a></li>
+  <li class="active btn btn-lg btn-secondary"><a href="../FR/Vue.html">Aperçu</a></li>
+  <li class="active2"><a href="../FR/index.html" > <img width="35px" src="DECON.PNG"></a></li>
+  <li class="active1"><a href="../EN/index.html" > <img width="35px" src="DrapeauEN.png"></a></li>
+</ul>
+<!-- ouverture de la page  -->
+  <body onload="NSLOAD();" class="text-center">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Pannel de gestion - Network servers</h1>
+        <p class="lead">Vous pouvez configurer votre network server grâce au formulaire suivant :</p>
+		<!-- Création d'un form permettant le choix de la partie a configurer -->
+			<form class="form-group">
+			<label for="sel1">Choisissez où voulez-vous agir au niveau de la configuration :</label>
+			<!-- Liste d'options de partie -->
+			<select class="form-control" id="sel1">
+			<option>Passerelle</option>
+			<option>Broker</option>
+			<option>Network server</option>
+			<option>Dispositifs</option>
+			</select>
+			<!-- Bouton suivant entrainant la fonction "conversion" -->
+			<p>  </p>
+			<input class="btn btn-lg btn-secondary"  type="submit" value="Suivant" onclick="conversion();return false;">
+			<div id="formjs">
+			<!-- <div id="formjs1"> -->
+			<!-- <form><table class="table"><tr><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> mqttBrokerId : <p> <input type="text" id="brokerid" ></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> mqttBrokerPort :<p> <input type="text" id="brokerport"></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> mqttBrokerUser : <p> <input type="text" id="brokeruser"></td></tr><tr><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> mqttBrokerPassword : <p> <input type="text" id="brokerpw"></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> mqttBrokerAddress : </p> <input type="text" id="brokeraddr"></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> caFile : <p> <input type="text" id="cafile"></td></tr><tr><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> certFile : <p> <input type="text" id="certfile"></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> keyFile :<p> <input type="text" id="keyfile"></td><td><p><span data-tip="Nice Tooltip!"><img width="10px" src="pointint.png"></span> certPassword : <p> <input type="text" id="certpw"></td></tr></table>	<input class="btn btn-lg btn-success" onclick="transformation();"type="submit" value="Terminer la configuration !"></form> -->
+			<!-- </div> -->
+			<!-- <div id="formjs0"> -->
+			<!-- </div> -->
+			<!-- <div id="formjs2"> -->
+			<!-- </div> -->
+			</form>
+			<div class="inner cover">
+			<table class="table">
+			<tr>
+			</tr>
+			</table>
+			</div>
+			<p>
+			</p>
+			</main>
+   </div>
+ </body>

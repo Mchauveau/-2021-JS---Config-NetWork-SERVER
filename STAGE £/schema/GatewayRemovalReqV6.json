@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-.org/draft-04/schema#",
+	"title": "Gateway removal request - V2.1",
+	"type": "object",
+	"properties": {
+		"reqId": {
+			"type": "string"
+		},
+		"gatewayId": {
+			"type": "string",
+			"minLength": 16,
+			"maxLength": 16,
+			"pattern": "^[0-9A-F][02468ACE][0-9A-F]{14}$"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"reqId",
+		"gatewayId"
+	]
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta content="text/html;charset=UTF-8">
+<!-- Entête liant la page web au javascript et au CSS -->
+<title> Pannel de gestion - Network Server </title> 
+<link rel="stylesheet" href="CSS.css">
+<script src="bundle.js"></script>
+<script src="js\JSPROJET.js"></script>
+</head>		
+<!-- Onglets top avec image pour changement de langue -->
+<ul class="nav nav-tabs">
+  <li class="active btn btn-lg btn-secondary"><a href="../FR/supprimer.html">Supprimer</a></li>
+  <li class="active btn btn-lg btn-secondary"><a href="../FR/conf.html">Ajouter</a></li>
+  <li class="active btn btn-lg btn-warning"><a href="../FR/Vue.html">Aperçu</a></li>
+    <li class="active2"><a href="../FR/index.html" > <img width="35px" src="DECON.PNG"></a></li>
+  <li class="active1"><a href="../EN/supprimer.html" > <img width="35px" src="DrapeauEN.png"></a></li>
+</ul>
+<!-- ouverture de la page  -->
+  <body onload="NSLOAD();" class="text-center">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Pannel de gestion - Network servers</h1>
+        <p class="lead">Vous pouvez afficher des pages de configurations de votre network server en rentrant leurs id :</p>
+			<!-- Création d'un form permettant le choix de la partie a supprimer -->
+			<form class="form-group">
+			<label for="sel1">Quelle page de configuration voulez-vous afficher ?</label>
+			<select class="form-control" id="sel1">
+			<!-- Liste d'options de partie -->
+			<option>Passerelle</option>
+			<option>Broker</option>
+			<option>Devices</option>
+			<option>ASA ROUTER</option>
+			<option>Network server other options</option>
+			</select>
+			<p>  </p>
+			<!-- Bouton suivant entrainant la fonction Suppression -->
+			<input class="btn btn-lg btn-secondary"  type="submit" value="Suivant" onclick="Visual();return false;">
+			<div id="formjs">
+			</div>
+			<div class="inner cover">
+			<table class="table">
+			<tr>
+			</tr>
+			</table>
+			</div>
+			</main>
+   </div>
+ </body>

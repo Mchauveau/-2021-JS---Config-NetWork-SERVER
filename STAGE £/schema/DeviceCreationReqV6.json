@@ -1,0 +1,133 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Device creation request - V2.2",
+    "type": "object",
+    "properties": {
+        "reqId": {
+            "type": "string"
+        },
+        "deviceId": {
+            "type": "string",
+            "minLength": 16,
+            "maxLength": 16,
+            "pattern": "^[0-9A-F][02468ACE][0-9A-F]{14}$"
+        },
+        "deviceName": {
+            "type": "string"
+        },
+        "timerPiggyBack": {
+            "type": "integer"
+        },
+        "type": {
+            "type": "string",
+            "const": "TAG"
+        },
+        "version": {
+            "type": "string"
+        },
+        "mode": {
+            "type": "string",
+            "enum": [
+                "MODEA",
+                "MODEC"
+            ]
+        },
+        "adrCapable": {
+            "type": "boolean",
+            "default": false
+        },
+        "adrMode": {
+            "type": "string",
+            "enum": [
+                "SAFE_MODE",
+                "AGGRESSIVE_MODE",
+                "PREDEFINED_MODE"
+            ]
+        },
+        "adrPredefinedModeInitialDrOpt": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+        },
+        "maxDevicePendingJoin": {
+            "type": "integer"
+        },
+        "maxDevicePendingJoinForReactiveControl": {
+            "type": "integer"
+        },
+        "maxDedupJoinPreventive": {
+            "type": "integer"
+        },
+        "maxDedupJoinReactive": {
+            "type": "integer"
+        },
+        "devKey": {
+            "type": "string",
+            "minLength": 32,
+            "maxLength": 32,
+            "pattern": "[0-9A-F]"
+        },
+        "asaId": {
+            "type": "string"
+        },
+        "serial": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "swRev": {
+            "type": "string"
+        },
+        "hwRev": {
+            "type": "string"
+        },
+        "class": {
+            "type": "string"
+        },
+        "loc_enable": {
+            "type": "string",
+            "enum": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        "loc_max_period_time_minutes": {
+            "type": "integer"
+        },
+        "loc_min_period_time_minutes": {
+            "type": "integer"
+        },
+        "deviceChannels": {
+            "type": "array",
+            "items": {
+                "$ref": "DeviceChannelV6.json"
+            },
+            "minItems": 1
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "reqId",
+        "deviceId",
+        "deviceName",
+        "timerPiggyBack",
+        "type",
+        "version",
+        "mode",
+        "maxDevicePendingJoin",
+        "maxDevicePendingJoinForReactiveControl",
+        "maxDedupJoinPreventive",
+        "maxDedupJoinReactive",
+        "devKey",
+        "asaId",
+        "serial",
+        "swRev",
+        "hwRev",
+        "class",
+        "loc_enable",
+        "loc_max_period_time_minutes",
+        "loc_min_period_time_minutes",
+        "deviceChannels"
+    ]
+}
